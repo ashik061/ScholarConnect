@@ -12,7 +12,7 @@ const HomePage = () => {
         <>
             <Hero />
             <HomeCards />
-            <MentorListings />
+            <MentorListings isHome= {true}/>
             <ViewAllMentors />
             <Footer />
         </>
