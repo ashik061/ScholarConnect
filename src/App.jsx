@@ -1,22 +1,26 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import HomeCards from './components/HomeCards'
-import MentorListings from './components/MentorListings'
-import ViewAllMentors from './components/ViewAllMentors'
-import Footer from './components/Footer'
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import MainLayout from './layouts/MainLayout'
+import MentorsPage from './pages/MentorsPage'
+import NotFoundPage from './pages/NotFoundPage'
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<MainLayout />}>
+      <Route index element={<HomePage />} />
+      <Route path='/mentors' element={<MentorsPage />} />
+      <Route path='*' element={<NotFoundPage />} />
 
+      
+    </Route>
+  )
+)
 
 const App = () => {
   return (
     <>
-      <Navbar/>
-      <Hero />
-      <HomeCards />
-      <MentorListings />
-      <ViewAllMentors />
-      <Footer />
+      <RouterProvider router={router} />
     </>
   )
 }
