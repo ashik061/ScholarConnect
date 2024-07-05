@@ -12,20 +12,20 @@ const HomeCards = () => {
                         Browse our mentorship opportunities and start your journey towards higher education abroad.
                         </p>
                         <a
-                            href="/jobs.html"
-                            className="inline-block bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-700"
+                            href="/mentors.html"
+                            className="inline-block bg-slate-600 text-white rounded-lg px-4 py-2 hover:bg-slate-700"
                         >
                             Browse Mentors
                         </a>
                     </Card>
-                    <Card bg='bg-indigo-100'>
+                    <Card bg='bg-gray-100'>
                         <h2 className="text-2xl font-bold">For Mentors</h2>
                         <p className="mt-2 mb-4">
                         List your mentorship opportunity to help students from Bangladesh achieve their academic goals.
                         </p>
                         <a
-                            href="/add-job.html"
-                            className="inline-block bg-indigo-500 text-white rounded-lg px-4 py-2 hover:bg-indigo-600"
+                            href="/add-mentorship.html"
+                            className="inline-block bg-gray-500 text-white rounded-lg px-4 py-2 hover:bg-gray-700"
                         >
                             Add Mentorship
                         </a>

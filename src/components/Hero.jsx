@@ -3,7 +3,7 @@ import React from 'react'
 const Hero = ({ title = 'Your Journey to Higher Education Starts Here',
     subtitle = `Discover mentorship opportunities with PhD and MS students abroad, who can guide you through the journey of studying and living abroad.` }) => {
     return (
-        <section className="bg-indigo-700 py-20 mb-4">
+        <section className="bg-slate-700 py-20 mb-4">
             <div
                 className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center"
             >

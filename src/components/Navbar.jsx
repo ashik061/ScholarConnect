@@ -3,7 +3,7 @@ import logo from '../assets/images/logo.png'
 
 const Navbar = () => {
     return (
-        <nav className="bg-indigo-700 border-b border-indigo-500">
+        <nav className="bg-slate-700 border-b border-slate-500 sticky top-0 z-50">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="flex h-20 items-center justify-between">
                     <div
@@ -28,12 +28,12 @@ const Navbar = () => {
                                 >Home</a
                                 >
                                 <a
-                                    href="/jobs.html"
+                                    href="/mentors.html"
                                     className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                                 >Mentors</a
                                 >
                                 <a
-                                    href="/add-job.html"
+                                    href="/add-mentorship.html"
                                     className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                                 >Add Mentorship</a
                                 >
