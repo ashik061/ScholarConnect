@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://my-json-server.typicode.com/ashik061/json-backend-server/mentors',
+        target: 'https://my-json-server.typicode.com/ashik061/json-backend-server/mentors/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
