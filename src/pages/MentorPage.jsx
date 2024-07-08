@@ -31,6 +31,7 @@ const MentorPage = () => {
     //     fetchMentorData()
     // }, [])
 
+
     return (
 
         <>
@@ -144,9 +145,14 @@ const MentorPage = () => {
     )
 }
 const mentorDataLoader = async ({ params }) => {
+    try {
         const res = await fetch(`/api/mentors/${params.id}`)
         const data = await res.json()
         return data
+    } catch (error) {
+        console.log('Error loading data', error)
+    }
+
 }
 
 export { MentorPage as default, mentorDataLoader }
