@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import { FaMapMarker } from 'react-icons/fa'
+import { FaLocationDot } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 
 const MentorListing = ({ mentor }) => {
     const [showFullDescription, setShowFullDescription] = useState(false)
@@ -42,15 +43,15 @@ const MentorListing = ({ mentor }) => {
 
                 <div className="flex flex-col lg:flex-row justify-between mb-4">
                     <div className="text-orange-700 mb-3">
-                        <FaMapMarker className="inline text-lg mx-1 mb-1"/>
+                        <FaLocationDot className="inline text-lg mx-1 mb-1"/>
                         {mentor.location}
                     </div>
-                    <a
-                        href={`/mentor/${mentor.id}`}
+                    <Link
+                        to={`/mentor/${mentor.id}`}
                         className="h-[36px] bg-slate-500 hover:bg-slate-600 text-white px-5 py-2 rounded-lg text-center text-sm mr-5"
                     >
                         Learn More
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

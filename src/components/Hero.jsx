@@ -14,8 +14,8 @@ const Hero = ({ title = 'Your Journey to Higher Education Starts Here',
                         {title}
                     </h1>
                     <p className="my-4 text-xl text-white">
-                        {subtitle.split('through ')[0]}through <br />
-                        {subtitle.split('through ')[1]}
+                        {subtitle.split('you ')[0]}you<br />
+                        {subtitle.split('you ')[1]}
                     </p>
                 </div>
             </div>
