@@ -11,7 +11,7 @@ const MentorListings = ({ isHome = false }) => {
 
     useEffect(() => {
         const fetchMentorsData = async () => {
-            const apiURL = isHome ? '/api/mentors?_limit=3' : '/api/mentors'
+            const apiURL = isHome ? '/api?_limit=3' : '/api'
             try {
                 const res = await fetch(apiURL)
                 const data = await res.json()
