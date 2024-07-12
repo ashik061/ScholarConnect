@@ -146,7 +146,7 @@ const MentorPage = () => {
 }
 const mentorDataLoader = async ({ params }) => {
     try {
-        const res = await fetch(`/api/${params.id}`)
+        const res = await fetch(`/api/mentors/${params.id}`)
         const data = await res.json()
         return data
     } catch (error) {
