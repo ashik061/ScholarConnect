@@ -5,12 +5,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    // proxy: {
-    //   '/api': {
-    //     target: 'https://my-json-server.typicode.com/ashik061/json-backend-server/mentors/',
-    //     changeOrigin: true,
-    //     rewrite: (path) => path.replace(/^\/api/, ''),
-    //   },
-    // },
+    proxy: {
+      '/api': {
+        target: 'https://my-json-server.typicode.com/ashik061/json-backend-server/',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
   },
 })

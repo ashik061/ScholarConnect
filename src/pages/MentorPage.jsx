@@ -3,6 +3,8 @@ import { FaArrowLeft } from 'react-icons/fa'
 import { FaLocationDot } from 'react-icons/fa6'
 // import { useState, useEffect } from 'react'
 import { Link, useLoaderData, useParams } from 'react-router-dom'
+import Footer from '../components/Footer'
+import mentorsData from '../assets/jsons/mentors.json'
 
 
 const MentorPage = () => {
@@ -140,18 +142,28 @@ const MentorPage = () => {
                     </div>
                 </div>
             </section>
+            <Footer />
+
 
         </>
     )
 }
-const mentorDataLoader = async ({ params }) => {
-    try {
-        const res = await fetch(`/api/mentors/${params.id}`)
-        const data = await res.json()
-        return data
-    } catch (error) {
-        console.log('Error loading data', error)
+const mentorDataLoader = ({ params }) => {
+    // try {
+    //     const res = await fetch(`/api/mentors/${params.id}`)
+    //     const data = await res.json()
+    //     return data
+    // } catch (error) {
+    //     console.log('Error loading data', error)
+    // }
+
+    const mentor = mentorsData.find(m => m.id === params.id) 
+
+    if (!mentor) {
+        throw new Response("Mentor not found", { status: 404 })
     }
+
+    return mentor
 
 }
 

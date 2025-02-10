@@ -2,30 +2,39 @@ import React from 'react'
 import MentorListing from './MentorListing'
 import { useState, useEffect } from 'react'
 import Spinner from './Spinner'
+import mentorsData from '../assets/jsons/mentors.json'
 
 const MentorListings = ({ isHome = false }) => {
 
     const [mentors, setMentors] = useState([])
     const [loading, setLoading] = useState(true)
 
-
     useEffect(() => {
-        const fetchMentorsData = async () => {
-            const apiURL = isHome ? '/api/mentors?_limit=3' : '/api/mentors'
-            try {
-                const res = await fetch(apiURL)
-                const data = await res.json()
-                setMentors(data)
-            } catch (error) {
-                console.log('Error fetching data', error)
-            } finally {
-                setLoading(false)
-            }
+        // Simulate fetching delay
+        setTimeout(() => {
+            setMentors(isHome ? mentorsData.slice(0, 3) : mentorsData)
+            setLoading(false)
+        }, 1000) // Adjust delay as needed
+    }, [isHome])
 
-        }
 
-        fetchMentorsData()
-    }, [])
+    // useEffect(() => {
+    //     const fetchMentorsData = async () => {
+    //         const apiURL = isHome ? '/api/mentors?_limit=3' : '/api/mentors'
+    //         try {
+    //             const res = await fetch(apiURL)
+    //             const data = await res.json()
+    //             setMentors(data)
+    //         } catch (error) {
+    //             console.log('Error fetching data', error)
+    //         } finally {
+    //             setLoading(false)
+    //         }
+
+    //     }
+
+    //     fetchMentorsData()
+    // }, [])
 
     return (
         <section className="bg-slate-100 px-4 py-10">
